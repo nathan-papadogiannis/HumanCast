@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HumanCast</string>
+    <string name="welcome">Welcome!</string>
+    <string name="feedback">Give Feedback</string>
+</resources>
