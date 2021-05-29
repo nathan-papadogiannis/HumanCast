@@ -5,6 +5,8 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import javax.annotation.Generated;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Generated("jsonschema2pojo")
@@ -108,6 +110,16 @@ public class WeatherData {
 
     public void setAlerts(List<Alert> alerts) {
         this.alerts = alerts;
+    }
+
+    public String currentString(){
+        LocalTime time = LocalTime.now(); // Gets the current time
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss a");
+        System.out.println();
+        return  "-----------------------------------------------------------" +
+                "\nHello! Brellbert reporting live c-:" +
+                "\n\nRight now it is " + time.format(formatter) +
+                current.toString();
     }
 
 }

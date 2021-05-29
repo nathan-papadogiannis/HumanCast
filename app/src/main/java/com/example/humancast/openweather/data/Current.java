@@ -175,4 +175,69 @@ public class Current {
     public void setRain(Rain rain) {
         this.rain = rain;
     }
+
+    @Override
+    public String toString() {
+        //note: dt, sunrise, and sunset arent here
+        String str =    "\nThe temperature is " + temp + " degrees";
+        if (Math.abs(temp - feelsLike) > 5){
+            str += ", but it feels like " + feelsLike + ".";
+        }
+        else{
+            str += " and it sure does feel like it.";
+        }
+        Weather currentWeather = weather.get(0);
+        switch (currentWeather.getMain()){
+            case "Thunderstorm": str += "\nBOOM POW CRACK krakjrkjJEXJLRSFSLF!!!!! " +
+                                        "\nNot to steal anyone's thunder, but I think that was a pretty good lightning impression." +
+                                        "\nHuh? Lightning doesn't make noise? Uhm... Anyways, a " + currentWeather.getDescription() +
+                                        " is outside RIGHT NOW!" +
+                                        "\nPlease, stay safe if you're going out. Rubber boots or bust.";
+                                break;
+
+            case "Drizzle":     str +=  "\nBring an umbrella cuz you're gonna need it!";
+                                if (!currentWeather.getDescription().equals("drizzle")) {
+                                    str += "It's drizzling outside, or as the cool folks with the lab coats call it, a " +
+                                    "\"" + currentWeather.getDescription() + ".\"";
+                                }
+                                str +=  "\nThis kind of weather is always good for curling up and watching a movie," +
+                                        "\nso I hope I'm not overstepping by suggesting a little bit of \"you time.\"";
+                                break;
+
+            case "Rain":        str +=  "\nNow...not to rain on your parade, but it's being rained on. Right now. By rain." +
+                                        "\nIn fact, I'm standing outside in quite " + currentWeather.getDescription() + " as we speak," +
+                                        "\nand I think that's enough to confirm it. Rain." +
+                                        "\nAllow me a moment to head back inside..." +
+                                        "\nOkay, let's continue as I dry off.";
+                                break;
+
+            case "Snow":        str +=  "\nTh ese stu7pid t3xting gl0ves b barel y workdf,...." +
+                                        "\nMy apologies, I won't ever be using those again. Ahem...";
+                                if (currentWeather.getId() < 603 || currentWeather.getId() > 599){
+                                    str += "\nLook outside! It's practically a winter wonderland out here with all this lovely snow!";
+                                }
+                                else {
+                                    str += "\nIt's snowing outside, but admittedly, its snowing quite unattractively." +
+                                            "\nWhat I mean is that there is " + currentWeather.getDescription() + " outside. Nevertheless,";
+                                }
+                                str +=  "\nI hope you can enjoy some time indoors today, perhaps with a cup of hot cocoa.";
+                                break;
+        }
+        str +=  "\n--------------------------------------------------------------------" +
+                "\nNow, onto extra weather stats for those that are interested:" +
+                "\nThe humidity is " + humidity + "%." +
+                "\nThe atmospheric pressure at sea level is " + pressure + " hPa." +
+                "\nThe dew point is " + dewPoint + " degrees." +
+                "\nThe UV index is " + uvi;
+        if(uvi == 0) { str += " (duh)."; }
+        else { str += "."; }
+        str +=  "\nIf you look up, you'll notice " + clouds + "% cloudiness right now." +
+                "\nIf you look forwards, visibility is at " + visibility + " meters." +
+                "\nLastly, expect " + windSpeed + "mph winds towards " + windDeg + " degrees." +
+                "\n--------------------------------------------------------------------" +
+                "\nThat's all from me. Thank you for tuning into my first broadcast." +
+                "\nI'm very excited to be starting my new life as a backyard meteorologist <3" +
+                "\n- Sincerely, Brellbert";
+        return str;
+    }
 }
