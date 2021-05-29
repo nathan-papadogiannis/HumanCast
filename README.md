@@ -1,7 +1,7 @@
 ![HumanCast Banner](Banner.png)
 
 # HumanCast
-First-time Android project to provide a customized weather experience!
+HumanCast is a new app for Android that delivers accurate weather data, personalized forecasts, and tongue-in-cheek humor from your new weather pal, Brellbert.
 
 # Goals For This Project
 
