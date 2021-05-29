@@ -31,4 +31,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("hey lol");
     }
 
+    public void onClickForecast(View view){
+        startActivity(new Intent(MainActivity.this, ForecastActivity.class));
+    }
 }
