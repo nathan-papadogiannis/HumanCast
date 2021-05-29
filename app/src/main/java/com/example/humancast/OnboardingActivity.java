@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.cuberto.liquid_swipe.LiquidPager;
 
-public class Onboarding extends AppCompatActivity implements Frag1.OnFragmentInteractionListener,
+public class OnboardingActivity extends AppCompatActivity implements Frag1.OnFragmentInteractionListener,
                                                             Frag2.OnFragmentInteractionListener,
                                                             Frag3.OnFragmentInteractionListener{
 

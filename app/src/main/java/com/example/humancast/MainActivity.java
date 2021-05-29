@@ -3,6 +3,7 @@ package com.example.humancast;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -10,13 +11,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
         boolean noob = prefs.getBoolean(noobKey, true);
         if(noob){
-            startActivity(new Intent(MainActivity.this, Onboarding.class));
+            startActivity(new Intent(MainActivity.this, OnboardingActivity.class));
         }
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
     }
 
     @Override

@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">HumanCast</string>
-    <string name="welcome">\'Sup.</string>
+    <string name="welcome">\'Sup, I\'m Brellbert</string>
     <string name="feedback">Give Feedback</string>
-    <string name="Finish">Finish</string>
+    <string name="finish">Finish</string>
+    <string name="nuthin">There\'s Nothing Here RN</string>
+    <string name="process">Trust The Process</string>
+    <string name="construction">:D Under Construction</string>
+    <string name="p1_onboard">Nice to meet you! \n\nI\'m your new personal weather pal (Assistant just sounds dreary). In no time, I\'ll be whipping up forecasts like there\'s no tomorrow! \n\nThere\'s just one thing…</string>
+    <string name="p3_onboard">I assure you, you\'re in good hands! We\'ll meet again real soon.\n\n Sincerely,\nBrellbert</string>
+    <string name="p2_onboard">But there will be! I wasn\'t expecting company so soon...\n\nNo matter! I\'ll have this place up in running soon enough. Then I can whip up forecasts like there\'s no tomorrow.</string>
+    <string name="forecast">Forecast</string>
+    <string name="forecast_incoming">Forecast Incoming...</string>
 </resources>
