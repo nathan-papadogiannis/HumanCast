@@ -1,3 +1,5 @@
+![HumanCast Banner](Banner.png)
+
 # HumanCast
 First-time Android project to provide a customized weather experience!
 
